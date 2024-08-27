@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author SENA
+ */
+public class ejercicio2 {
+    
+    //syntaxis funcion = modificador tipo nombre (tipo psr1, tipo par2, ...)
+    //modificador= static, private, protected, public or default
+    //tipo = int, float, double, boolean, string
+  
+    // programa principal
+    public static void main (String[] args){
+        mostrarMensaje();
+        mostrarMensaje();
+        mostrarMensaje();
+        
+        int numero;
+        numero = 0;
+        
+        mostrarNumero(numero);
+
+        int num1 = 0;
+        int num2 = 2;
+        System.out.println("la suma de los numeros: " + num1+ " y " + num2 + " es: " + mostrarsuma(num1,num2));
+        
+
+        apellido("Juan ");
+        apellido("Yan ");
+        
+        int edad = 17;
+        nombreEdad("Juan", edad);
+}
+
+    //metodo
+    static void mostrarMensaje(){
+        System.out.println("Hola, ¿Cómo estas?");
+    }
+        
+    //tipos de funciones
+    //Reciben datos y no devuelven nada
+    //No reciben datos y  no devuelven nada
+    //Reciben datos y devuelven datos
+    
+    //primer caso
+    static void mostrarNumero(int numero){
+        System.out.println("Numero " + numero);
+    }
+    //Tercer caso
+    static int mostrarsuma(int numero1, int numero2){
+        int resultado = numero1 + numero2;
+        return resultado;
+       }
+    static void apellido(String nombre){
+        System.out.println( nombre + "Sanchez");
+    }
+    static void nombreEdad(String nombre, int edad){
+        System.out.println("hola mi nombre es: " + nombre + " y mi edad es: "+ edad);
+    }
+}

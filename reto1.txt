@@ -1,0 +1,124 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Salud;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author SENA
+ */
+public class Persona {
+    
+ public String tipoDoc;
+ public int documento;
+ public String nombre;
+ public String apellido;
+ public float peso;
+ public float estatura;
+ public int edad;
+ public String sexo;
+ 
+public Persona(String tipoDoc, int documento, String nombre, String apellido, float peso, float estatura, int edad, String sexo){
+    
+this.tipoDoc=tipoDoc;
+this.documento=documento;
+this.nombre=nombre;
+this.apellido=apellido;
+this.peso=peso;
+this.estatura=estatura;
+this.edad=edad;
+this.sexo=sexo;
+
+}
+
+public void pedirDatos(){
+    
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Ingresa tu tipo de documento:");
+        tipoDoc = scan.nextLine();
+        System.out.println("Ingresa tu numero de documento:");
+        documento = scan.nextInt();
+        scan.nextLine(); // Consumir el salto de línea pendiente
+        System.out.println("Ingresa tu nombre:");
+        nombre = scan.nextLine();
+        System.out.println("Ingresa tu apellido:");
+        apellido = scan.nextLine();
+        System.out.println("Ingresa tu peso en kilogramos:");
+        peso = scan.nextFloat();
+        System.out.println("Ingresa tu estatura en metros:");
+        estatura = scan.nextFloat();
+        System.out.println("Ingresa tu edad:");
+        edad = scan.nextInt();
+        scan.nextLine(); // Consumir el salto de línea pendiente
+        System.out.println("Ingresa tu genero:");
+        sexo = scan.nextLine();
+
+}
+
+public void mostrarDatos(){
+    
+    System.out.println("El tipo de documento ingresado es: " + tipoDoc);
+    System.out.println("El numero de documento ingresado es: " + documento);
+    System.out.println("El nombre ingresado es: " + nombre);
+    System.out.println("El apellido ingresado es: " + apellido);
+    System.out.println("El peso ingresado es: " + peso);
+    System.out.println("la estatura ingresada es: " + estatura);
+    System.out.println("la edad ingresada es: " + edad);
+    System.out.println("El genero ingresado es: " + sexo);
+    
+}
+
+public float calcularlmc(){
+
+float pesoActual = peso / (estatura*estatura);
+
+if (pesoActual < 20){
+    System.out.println("El peso esta bajo");
+}
+
+else if (pesoActual > 20 && pesoActual < 25){  
+    System.out.println("El peso esta en lo ideal");
+}
+
+else{
+    System.out.println("Tiene sobrepeso");
+}
+
+return pesoActual;
+
+}
+
+public void mayorEdad(){
+    if (edad<18){
+        System.out.println("Es menor de edad");
+    }
+    else {
+        System.out.println("Es mayor de edad");
+    }
+
+}
+
+    public static void main(String[] args) {
+
+        for (int i=0; i==i; i++){
+            System.out.println("!Bienvenido al programa¡");
+            System.out.println("En este programa podras agregar tus datos, determinar si eres o no mayor de edad y si el peso que tienes es adecuado");
+            System.out.println("");
+            
+            Persona persona1=new Persona("", 0, "", "" , 0.0f, 0.0f, 0, "");
+            persona1.pedirDatos();
+                 System.out.println("");
+            persona1.mostrarDatos();
+                 System.out.println("");
+            persona1.calcularlmc();
+                 System.out.println("");
+            persona1.mayorEdad();
+                 System.out.println("");
+            
+        }
+    }
+} 

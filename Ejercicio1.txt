@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicios;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author SENA
+ */
+public class Ejercicios {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese el numero que quiere multiplicar: ");
+        int numero = leer.nextInt();
+        System.out.println("Ingrese hasta que numero quiere multiplicar: ");  
+        int numero2 = leer.nextInt()+1;
+        
+        for (int f=0; f<numero2; f++){
+        int multiplicacion = numero*f;
+            System.out.println("El numero " + numero + " multiplicado por: " + f + " es igual a: " + multiplicacion);
+        }
+        
+    }
+    
+}

@@ -1,0 +1,33 @@
+public class Animal {
+    
+    public String nombre;
+    public int edad;
+    
+    public Animal(String nombre, int edad){
+    
+        this.nombre=nombre;
+        this.edad=edad;
+    
+    }
+    
+    public void comer(){
+        System.out.println( nombre + " esta comiendo");
+    }
+    
+    public void saltar(){
+        System.out.println( nombre + " esta saltando");
+    }
+    
+    public void mostrar(){
+        System.out.println("El perro se llama: " + nombre + " Y su edad es: " + edad + " año");
+        
+    }
+    
+    public static void main(String[] args) {
+        
+        Animal perro=new Animal("Firulais", 1);
+        perro.mostrar();
+        perro.saltar();
+        perro.comer();
+        
+    }

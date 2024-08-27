@@ -1,0 +1,55 @@
+
+package cuenta;
+
+import java.util.Scanner;
+
+public class Principal {
+    
+        public static void main(String[] args) {
+        
+            Scanner scan = new Scanner(System.in);
+            
+        int ciclo = 1;
+        
+        Cuenta cuenta1 = new Cuenta("Juan");
+        
+        while (ciclo == 1){         
+
+          
+            System.out.println("Bienvenido");
+            cuenta1.mostrarSaldo();
+            System.out.println("¿Qué acción desea realizar?");
+            System.out.println("1- Depositar dinero");
+            System.out.println("2- Retirar dinero");
+            System.out.println("3- Salir");
+            int accion = scan.nextInt();
+            
+            switch (accion){
+                
+                case 1:
+                    System.out.println("¿Cuanto dinero desea ingresar?");
+                    double ingreso = scan.nextDouble();
+                    cuenta1.ingresar(ingreso);
+                    break;
+                    
+                case 2:
+                    System.out.println("¿Cuanto dinero desea retirar?");
+                    double retiro = scan.nextDouble();
+                    cuenta1.retirar(retiro); 
+                    break;
+                    
+                case 3:
+                    System.out.println("Gracias por usar");
+                    cuenta1.mostrarSaldo();
+                    ciclo = 0;
+                    break;
+            }
+            
+            
+
+        
+        }
+        
+        
+        }
+}

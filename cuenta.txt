@@ -1,0 +1,73 @@
+
+package cuenta;
+
+import java.util.Scanner;
+
+public class Cuenta {
+    
+    private String titular;
+    private double saldo;
+
+    public Cuenta(String titular, double saldo){
+        
+        this.titular = titular;
+        this.saldo = saldo;
+    
+    }
+    
+    public Cuenta(String titular){
+        
+        this.titular = titular;
+        this.saldo = 0;
+    
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+   
+    
+    public double ingresar(double cantidad){
+
+        saldo = saldo + cantidad;
+        System.out.println("Tras ingresar " + cantidad + " La cuenta tiene un saldo de: " + saldo);
+        return saldo;
+    }
+    
+    public double retirar(double cantidad){
+
+        if (saldo>cantidad){
+        
+            saldo = saldo - cantidad;
+            System.out.println("Tras retirar " + cantidad + " La cuenta tiene un saldo de: " + saldo);
+
+        
+        } else{
+        
+            System.out.println("No se puede retirar esa cantidad, la cuenta tiene un saldo insuficiente");
+        
+        }  
+            
+        return saldo;
+            
+    }
+    
+    public void mostrarSaldo(){
+    
+        System.out.println("La cuenta tiene un saldo de: " + saldo);
+        
+    }
+    
+}
